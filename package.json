@@ -1,0 +1,22 @@
+{
+  "name": "tt_downloader",
+  "version": "1.0.0",
+  "description": "My App",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "node-telegram-bot-api": "^0.61.0",
+    "tiktok-video-downloader": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node-telegram-bot-api": "^0.61.3"
+  },
+  "engines": {
+    "node": "18.7.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
