@@ -6,6 +6,7 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "node-telegram-bot-api": "^0.61.0",
+    "nodemon": "^2.0.22",
     "tiktok-video-downloader": "^1.0.4"
   },
   "devDependencies": {
