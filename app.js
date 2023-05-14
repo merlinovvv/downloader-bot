@@ -1,7 +1,7 @@
 
 require('dotenv').config();
 const token = process.env.BOT_API;
- 
+
 const http = require('http');
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
@@ -24,7 +24,7 @@ bot.onText(/\/start/, (msg) => {
 var isLoading = false;
 
 function isTikTokLink(link) {
-    if (link.includes('https://www.tiktok.com/') || link.includes('https://vm.tiktok.com')) {
+    if (link && link.includes('https://www.tiktok.com/') || link.includes('https://vm.tiktok.com')) {
         return true;
     }
 }
@@ -41,7 +41,7 @@ bot.on('message', async (msg) => {
         const video = await tiktokVideoDownloader.getInfo(linkVideo).then((result) => result.video.url.no_wm);
         bot.sendVideo(chatId, video);
         isLoading = false;
-    } else if(msg.text !== '/start') {
+    } else if (msg.text !== '/start') {
         bot.sendMessage(chatId, 'Sorry, but i do not understand you. Better send me a link to the video 🤖');
     }
 })
